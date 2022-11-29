@@ -1,0 +1,214 @@
+body{
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+/*Cabecera*/
+h1{
+    font-size: 4em;
+}
+/*Nevagación*/
+nav{
+    position: absolute;
+}
+nav img{
+    margin-top: 2vw;
+    margin-left: 2vw;
+}
+.lv1{
+    display: none;
+    position: absolute;
+    left: 95%;
+    top:40%;
+    background-color: #666666;
+    text-align: center;
+    color: white;
+    font-size: 1.2em
+}
+.lv1>li{
+    min-width: 64px;
+    width: 8vw;
+    padding: 10px;
+}
+.lv2{
+    display: none;
+    position: absolute;
+    left:95%;
+    top: 20%;
+    background-color: #D9D9D9;
+    color:black;
+    text-align: left;
+    text-decoration: underline;
+}
+.lv2>li{
+    min-width: 64px;
+    width:10vw;
+    padding: 0.8vh 1vw;
+}
+.lv3{
+    width:15vw;
+    display: none;
+    padding: 0.6vh 1vw;
+    position: absolute;
+    left:95%;
+    top: 20%;
+    background-color: #666666;
+    color:black; 
+}
+.lv3 a{
+    color: white;
+}
+
+nav>div:hover .lv1{
+    display: block;
+}
+/*Menu 1*/
+.lv1>li:nth-of-type(1):hover .lv2:nth-of-type(1){
+    display: block;
+    top:2%;
+}
+.lv1>li:nth-of-type(1) .lv2>li:nth-of-type(1):hover .lv3:nth-of-type(1){
+    display: block;
+}
+.lv1>li:nth-of-type(1) .lv2>li:nth-of-type(2):hover .lv3:nth-of-type(1){
+    display: block;
+}
+/*Menu 2*/
+.lv1>li:nth-of-type(2):hover .lv2:nth-of-type(1){
+    display: block;
+    top: 15%;
+}
+.lv1>li:nth-of-type(2) .lv2>li:nth-of-type(1):hover .lv3:nth-of-type(1){
+    display: block;
+}
+.lv1>li:nth-of-type(2) .lv2>li:nth-of-type(2):hover .lv3:nth-of-type(1){
+    display: block;
+}
+/*Menu 1*/
+.lv1>li:nth-of-type(3):hover .lv2:nth-of-type(1){
+    display: block;
+    top:25%;
+}
+.lv1>li:nth-of-type(3) .lv2>li:nth-of-type(1):hover .lv3:nth-of-type(1){
+    display: block;
+}
+.lv1>li:nth-of-type(3) .lv2>li:nth-of-type(2):hover .lv3:nth-of-type(1){
+    display: block;
+}
+/*Menu 1*/
+.lv1>li:nth-of-type(4):hover .lv2:nth-of-type(1){
+    display: block;
+    top: 35%;
+}
+.lv1>li:nth-of-type(4) .lv2>li:nth-of-type(1):hover .lv3:nth-of-type(1){
+    display: block;
+}
+.lv1>li:nth-of-type(4) .lv2>li:nth-of-type(2):hover .lv3:nth-of-type(1){
+    display: block;
+}
+/*Menu 1*/
+.lv1>li:nth-of-type(5):hover .lv2:nth-of-type(1){
+    display: block;
+    top: 45%;
+}
+.lv1>li:nth-of-type(5) .lv2>li:nth-of-type(1):hover .lv3:nth-of-type(1){
+    display: block;
+}
+.lv1>li:nth-of-type(5) .lv2>li:nth-of-type(2):hover .lv3:nth-of-type(1){
+    display: block;
+}
+/*Menu 1*/
+.lv1>li:nth-of-type(6):hover .lv2:nth-of-type(1){
+    display: block;
+    top: 55%;
+}
+.lv1>li:nth-of-type(6) .lv2>li:nth-of-type(1):hover .lv3:nth-of-type(1){
+    display: block;
+}
+.lv1>li:nth-of-type(6) .lv2>li:nth-of-type(2):hover .lv3:nth-of-type(1){
+    display: block;
+}
+/*Menu 1*/
+.lv1>li:nth-of-type(7):hover .lv2:nth-of-type(1){
+    display: block;
+    top: 65%;
+}
+.lv1>li:nth-of-type(7) .lv2>li:nth-of-type(1):hover .lv3:nth-of-type(1){
+    display: block;
+}
+.lv1>li:nth-of-type(7) .lv2>li:nth-of-type(2):hover .lv3:nth-of-type(1){
+    display: block;
+}
+/*Menu 1*/
+.lv1>li:nth-of-type(8):hover .lv2:nth-of-type(1){
+    display: block;
+    top: 75%;
+}
+.lv1>li:nth-of-type(8) .lv2>li:nth-of-type(1):hover .lv3:nth-of-type(1){
+    display: block;
+}
+.lv1>li:nth-of-type(8) .lv2>li:nth-of-type(2):hover .lv3:nth-of-type(1){
+    display: block;
+}
+/*Menu 1*/
+.lv1>li:nth-of-type(9):hover .lv2:nth-of-type(1){
+    display: block;
+    top: 85%;
+}
+.lv1>li:nth-of-type(9) .lv2>li:nth-of-type(1):hover .lv3:nth-of-type(1){
+    display: block;
+}
+.lv1>li:nth-of-type(9) .lv2>li:nth-of-type(2):hover .lv3:nth-of-type(1){
+    display: block;
+}
+.lv1>li:nth-of-type(1n+4){
+    display: none;
+}
+/*Contenido*/
+section{
+    display: flex;
+    justify-content: right;
+}
+#version{
+    width: 30vw;
+    margin-right: 1%;
+    margin-top: 16%;
+    padding: 2vw;
+    background-color: #EFCB85;
+}
+#version h2{
+    margin-bottom: 2vh;
+    font-size: 2em;
+    font-weight: bold;
+    text-decoration: underline;
+}
+#version h3{
+    margin-bottom: 0.5vh;
+    padding-top: 5px;
+    border-top: 2px dashed black;
+    font-size: 1.4em;
+    font-weight: 600;
+}
+#version p{
+    padding: 4px;
+    border: 2px solid black;
+}
+/*Pie de pagina*/
+footer{
+    width: 100%;
+    padding-top: 3vh;
+    padding-left: 1vw;
+    padding-bottom: 1vh;
+    position: fixed;
+    bottom: 0px;
+    background-color: #666666;
+    color: white;
+}
+footer>a,p{
+    display: inline;
+}
+footer>a>img{
+    width: 50px;
+}
+footer>a:nth-of-type(2){
+    margin-left: 70%;
+}
