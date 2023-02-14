@@ -1,0 +1,71 @@
+#Jefe1
+dn: uid=jefe1, ou=OU_Jefes, dc=luis, dc=local
+objectClass: top
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: person
+cn: jefe1
+uid: jefe1
+ou: jefes
+uidNumber: 2000
+gidNumber: 10000
+homeDirectory: /home/jefe1
+loginShell: /bin/bash
+userPassword: {SSHA}Kjo45GxRt1QwrcjsA9RWspN7bAoLfEg6
+sn: Jefe1
+mail: Jefe1@somebooks.com
+givenName: Jefe1
+
+#Jefe2
+dn: uid=jefe2,ou=OU_Jefes,dc=luis,dc=local
+objectClass: top
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: person
+cn: jefe2
+uid: jefe2
+ou: jefes
+uidNumber: 2001
+gidNumber: 10000
+homeDirectory: /home/jefe2
+loginShell: /bin/bash
+userPassword: {SSHA}W+FJGbhpMaaXE7YsUJrI95kvOUikAEu4
+sn: Jefe2
+mail: Jefe1@somebooks.com
+givenName: Jefe2
+
+#Currito1
+dn: uid=curito1,ou=OU_Curitos,dc=luis,dc=local
+objectClass: top
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: person
+cn: curito1
+uid: curito1
+ou: curitos
+uidNumber: 2010
+gidNumber: 10001
+homeDirectory: /home/curito1
+loginShell: /bin/bash
+userPassword: {SSHA}IUpU0Ui1WtMOECfWElIGE0BNTuKFTur1
+sn: curito1
+mail: curito1@somebooks.com
+givenName: curito1
+
+#Currito2
+dn: uid=curito2,ou=OU_Curitos,dc=luis,dc=local
+objectClass: top
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: person
+cn: curito2
+uid: curito2
+ou: curitos
+uidNumber: 2010
+gidNumber: 10001
+homeDirectory: /home/curito2
+loginShell: /bin/bash
+userPassword: {SSHA}XFu39oqcmUceO5u7MjSqwHIpoUnIC5tR
+sn: curito2
+mail: curito2@somebooks.com
+givenName: curito2

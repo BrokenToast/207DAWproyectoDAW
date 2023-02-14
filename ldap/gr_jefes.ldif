@@ -1,0 +1,5 @@
+dn: cn=jefes,ou=ou_Jefes,dc=luis,dc=local
+objectClass: top
+objectClass: posixGroup
+gidNumber: 10000
+cn: jefes
