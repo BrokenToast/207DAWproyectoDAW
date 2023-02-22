@@ -1,0 +1,4 @@
+dn: uid=jefe1,ou=OU_Jefes,dc=luis,dc=local
+changetype: modify
+replace: mail
+mail: jefe1@gmail.com
