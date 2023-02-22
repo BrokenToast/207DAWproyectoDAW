@@ -5,257 +5,151 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./webroot/style/reset.css"/>
-    <link rel="stylesheet" href="./webroot/style/style.css"/>
+    <!-- <link rel="stylesheet" href="./webroot/style/style.css"/> -->
     <title>Despliegue de Aplicaciones WEB</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            
+        }
+        #root{
+            width: 100%;height: 100vh;
+            display: flex;
+            flex-flow: column;
+            font-family: sans-serif;
+        }
+        /*Encabezado*/
+        header{
+            flex: 1 1 10%;
+            text-align: center;
+            font-size: 4em;
+        }
+        /*Contenido*/
+        main{
+            flex: 1 1 90%;
+            padding: 1%;
+            padding-bottom: 7%;
+            background-color: #E5E5E5;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1%;
+        }
+        main>a{
+            height: 200px;
+            margin-top:1%;
+            flex: 1 1 calc(95%/3);
+            border: 2px solid black;
+            border-radius: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            align-self: center;
+            background-color: white;
+            font-size: 6em;
+            font-weight: lighter;
+            color: black;
+            text-decoration: none;
+        }
+        .temas{
+            background-size:100%;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        .temas:hover{
+            transition: all 1s ease-in-out;
+            color:transparent
+        }
+        .temas:nth-child(1):hover{
+            background-size: 80%;
+            background-image: url(doc/unit1.jpg);
+        }
+        .temas:nth-child(2):hover{
+            background-size: 90%;
+            background-image: url(doc/unit2.png);
+        }
+        .temas:nth-child(3):hover{
+            background-size: 60%;
+            background-image: url(doc/unit4.jpeg);
+        }
+        .temas:nth-child(4):hover{
+            background-size: 80%;
+            background-image: url(doc/unit5.jpg);
+        }
+        .temas:nth-child(5):hover{
+            background-size: 80%;
+            background-image: url(doc/unit6.jpg);
+        }
+        .temas:nth-child(6):hover{
+            background-size: 80%;
+            background-image: url(doc/unit7.png);
+        }
+        .temas:nth-child(7):hover{
+            background-size: 25%;
+            background-image: url(doc/unit8.png);
+        }
+        .temas:nth-child(8):hover{
+            background-size: 40%;
+            background-image: url(doc/unit9.png);
+        }
+        /*Pie*/
+        footer{
+            width: 100%; height: 7%;
+            display: flex;
+            position: fixed;
+            justify-content: space-around;
+            align-items: center;
+            bottom: 0;
+            background-color: #F7F8FA;
+        }
+        footer>div{
+            width: 30%;
+            display: flex;
+        }
+        footer p{
+            margin-right: 5%;
+            align-self: center;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>Despliegue de Aplicaciones WEB</h1>
-    </header>
-    <nav>
-        <!-- <div id="nivel1">
-            <img src="./doc/menu.png" alt="" id="menu">
-            <div class="nivel2">
-                <div class="nivel3">
-                    <p>Tema 1</p>
-                    <div class="nivel4">
-                        <p>Teoria</p>
-                        <div class="nivel5">
-                            
-                            <a href="">Tomcat</a>
-                            <a href=""></a>
-                            <a href=""></a>
-                        </div>
-                    </div>
-                    <div class="nivel4">
-                        <p>Practica</p>
-                        <div class="nivel5">
-                            
-                        </div>
-                    </div>
-                </div>
-                <div class="nivel3">
-                    <p>Tema 2</p>
-                    <div class="nivel4">
-                        <p>Teoria</p>
-                        <div class="nivel5">
-
-                        </div>
-                    </div>
-                    <div class="nivel4">
-                        <p>Practica</p>
-                        <div class="nivel5">
-                        
-                        </div>
-                    </div>
-                </div>
-                <div class="nivel3">
-                    <p>Tema 3</p>
-                    <div class="nivel4">
-                        <p>Teoria</p>
-                        <div class="nivel5">
-                            
-                        </div>
-                    </div>
- -->
-        <div id="padre">
-            <img src="./doc/menu.png" alt="" id="menu">
-            <ul class="lv1">
-                <li>Tema 1
-                    <br>
-                    <ul class="lv2">
-                        <li>Teoria
-                            <ul class="lv3">
-                                <li><a href="./doc/teoria/unidad1/UD6_Instalación Tomcat en Windows .pdf">Tomcat</a></li>
-                            </ul>
-                        </li>
-                        <li>Practica
-                            <ul class="lv3">
-                                <li><a href="./doc/practica/ud1Actividad1_LuisPérezAstorga 1.pdf">Practica 1</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-                <li>Tema 2
-                    <br>
-                    <ul class="lv2">
-                        <li>Teoria
-                            <ul class="lv3">
-                                <li><a href="/doc/teoria/unidad2/UD2_1_ServidorWeb_Apache -ADMINISTRACION_I.pdf">Servidor web I</a></li>
-                                <li><a href="/doc/teoria/unidad2/UD2_2_ServidorWeb_Apache -ADMINISTRACION_II.pdf">Servidor web II</a></li>
-                                <li><a href="/doc/teoria/unidad2/UD2_5_ServidorWeb_Apache -ADMINISTRACION_V_ServidorWebSeguro.pdf">HTTPS</a></li>
-                                <li><a href="/doc/teoria/unidad2/UD2_6_ServidorWeb_Apache -Negociación de contenidos.pdf">Negociación de contenidos</a></li>
-                                <li><a href="/doc/teoria/unidad2/http-status-code-poster.pdf">Código de error de HTTP</a></li>
-                            </ul>
-                        </li>
-                        <li>Practica
-                            <ul class="lv3">
-                                <li><a href="./doc/practica/estudioTema2.html">Practica 1</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-                <li>Tema 3
-                    <br>
-                    <ul class="lv2">
-                        <li>Teoria
-                            <ul class="lv3">
-                                <li><a href="./doc/teoria/unidad3/UD3_ServicioTransferenciaFicheros_Introducción.pdf">Introducción</a></li>
-                                <li><a href="./doc/teoria/unidad3/UD3. Servicio de transferencia de datos _SSH y SFTP.pdf">SSH/SFTP</a></li>
-                                <li><a href="./doc/teoria/unidad3/UD3_03. SFTP Enjaular usuarios.pdf">SFTP Enjaular</a></li>
-                                <li><a href="./doc/teoria/unidad3/UD3_05_FTP_Teoría.pdf">FTP /SFTP-Teoría</a></li>
-                                <li><a href="./doc/teoria/unidad3/UD3_06 proFTPD.pdf">Servidor proFTPd</a></li>
-                            </ul>
-                        </li>
-                        <li>Practica
-                            <ul class="lv3">
-                                <li><a href="">Working in progress</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-                <li>Tema 4
-                    <br>
-                    <ul class="lv2">
-                        <li>Teoria
-                            <ul class="lv3">
-                                <li><a href="">a</a></li>
-                                <li><a href="">a</a></li>
-                                <li><a href="">a</a></li>
-                                <li><a href="">a</a></li>
-                            </ul>
-                        </li>
-                        <li>Practica
-                            <ul class="lv3">
-                                <li><a href="">a</a></li>
-                                <li><a href="">a</a></li>
-                                <li><a href="">a</a></li>
-                                <li><a href="">a</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-                <li>Tema 5
-                    <br>
-                    <ul class="lv2">
-                        <li>Teoria
-                            <ul class="lv3">
-                                <li><a href="">a</a></li>
-                                <li><a href="">a</a></li>
-                                <li><a href="">a</a></li>
-                                <li><a href="">a</a></li>
-                            </ul>
-                        </li>
-                        <li>Practica
-                            <ul class="lv3">
-                                <li><a href="">a</a></li>
-                                <li><a href="">a</a></li>
-                                <li><a href="">a</a></li>
-                                <li><a href="">a</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-                <li>Tema 6
-                    <br>
-                    <ul class="lv2">
-                        <li>Teoria
-                            <ul class="lv3">
-                                <li><a href="">a</a></li>
-                                <li><a href="">a</a></li>
-                                <li><a href="">a</a></li>
-                                <li><a href="">a</a></li>
-                            </ul>
-                        </li>
-                        <li>Practica
-                            <ul class="lv3">
-                                <li><a href="">a</a></li>
-                                <li><a href="">a</a></li>
-                                <li><a href="">a</a></li>
-                                <li><a href="">a</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-                <li>Tema 7
-                    <br>
-                    <ul class="lv2">
-                        <li>Teoria
-                            <ul class="lv3">
-                                <li><a href="">a</a></li>
-                                <li><a href="">a</a></li>
-                                <li><a href="">a</a></li>
-                                <li><a href="">a</a></li>
-                            </ul>
-                        </li>
-                        <li>Practica
-                            <ul class="lv3">
-                                <li><a href="">a</a></li>
-                                <li><a href="">a</a></li>
-                                <li><a href="">a</a></li>
-                                <li><a href="">a</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-                <li>Tema 8
-                    <br>
-                    <ul class="lv2">
-                        <li>Teoria
-                            <ul class="lv3">
-                                <li><a href="">a</a></li>
-                                <li><a href="">a</a></li>
-                                <li><a href="">a</a></li>
-                                <li><a href="">a</a></li>
-                            </ul>
-                        </li>
-                        <li>Practica
-                            <ul class="lv3">
-                                <li><a href="">a</a></li>
-                                <li><a href="">a</a></li>
-                                <li><a href="">a</a></li>
-                                <li><a href="">a</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-                <li>Tema 9
-                    <br>
-                    <ul class="lv2">
-                        <li>Teoria
-                            <ul class="lv3">
-                                <li><a href="">a</a></li>
-                                <li><a href="">a</a></li>
-                                <li><a href="">a</a></li>
-                                <li><a href="">a</a></li>
-                            </ul>
-                        </li>
-                        <li>Practica
-                            <ul class="lv3">
-                                <li><a href="">a</a></li>
-                                <li><a href="">a</a></li>
-                                <li><a href="">a</a></li>
-                                <li><a href="">a</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
-    </nav>
-    <section>
-        <div id="version">
-            <h2>Actualizaciones</h2>
+    <div id="root">
+        <header>
+            <h1>Despliegue de aplicaciones Web</h1>
+        </header>
+        <main>
+            <a href="doc/practicas/unit1.html" class="temas">
+                <h2>Tema 1</h2>
+            </a>
+            <a href="doc/practicas/unit2/Mis apuntes/DAW2/DAW/unit2.html" class="temas">
+                <h2>Tema 2</h2>
+            </a>
+            <a href="doc/practicas/unit4/Mis apuntes/DAW2/DAW/unit4.html" class="temas">
+                <h2>Tema 4</h2>
+            </a>
+            <a href="https://github.com/BrokenToast" class="temas">
+                <h2>Tema 5</h2>
+            </a>
+            <a href="doc/practicas/unit6/Mis apuntes/DAW2/DAW/unit6.html" class="temas">
+                <h2>Tema 6</h2>
+            </a>
+            <a href="https://github.com/BrokenToast/207DWESProyectoFinal/tree/master/doc/phpdoc"" class="temas">
+                <h2>Tema 7</h2>
+            </a>
+            <a href="" class="temas">
+                <h2>Tema 8</h2>
+            </a>
+            <a href="doc/practicas/unit9/Mis apuntes/Programación/Docker/Conceptos Basicos.html" class="temas">
+                <h2>Tema 9</h2>
+            </a>
+        </main>
+        <footer>
             <div>
-                <h3>0.1</h3>
-                <p>Initialization del projector DAW incluyendo:README,Licencia GNU.
+                <p> Creado por Luis Pérez Astorga</p>
+                <a href="./doc/curriculum/curriculum.html" target="_blank"><img src="./doc/CV.png" alt="Mi curriculum" width="25"></a>
             </div>
-        </div>
-    </section>
-    <footer>
-            <p>Luis Pérez Astorga® 2022-2023</p>
-            <a href="../index.php"><img src="./doc/logo_tostada.png" alt="Pagina creador"></a>
-            <a href="https://github.com/BrokenToast/207DAWproyectoDAW"><img src="./doc/git.png" alt="Git al proyecto"></a>
-    </footer>
+            <a href="../" target="_blank"><img src="doc/logo_Casa.png" alt="Pagina creador" width="50"></a>
+            <a href="https://github.com/BrokenToast/207DAWproyectoDAW" target="_blank"><img src="doc/git.png" alt="Github" width="50"></a>
+        </footer>
+    </div>
 </body>
 </html>
